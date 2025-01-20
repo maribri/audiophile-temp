@@ -1,0 +1,76 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: calc(100vw - vw($mobile, 48px));
+  max-height: calc(100vh - vw($mobile, 138px));
+  color: $defaultText;
+  background-color: $white;
+  border-radius: $borderRadius;
+  //box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  z-index: 5;
+
+  @media screen and (min-width: $tablet) {
+    width: rem(540);
+    max-height: calc(100vh - #{rem(138)});
+    //box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &--compact {
+    width: vw($mobile, 327px);
+
+    @media screen and (min-width: $tablet) {
+      width: rem(377);
+    }
+  }
+
+  &--right {
+    position: absolute;
+    top: vw($mobile, 91px);
+    right: vw($mobile, 9px);
+
+    @media screen and (min-width: $tablet) {
+      top: rem(91);
+      right: rem(10);
+    }
+    @media screen and (min-width: $desktop) {
+      top: rem(108);
+      right: rem(9);
+    }
+  }
+
+  &--centered {
+    top: calc(50% + vw($mobile, 45px));
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: $tablet) {
+      top: calc(50% + #{rem(45)});
+    }
+    @media screen and (min-width: $desktop) {
+      top: calc(50% + #{rem(48)});
+    }
+  }
+
+  &--full {
+    position: absolute;
+    top: vw($mobile, 90px);
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - vw($mobile, 90px));
+    border-radius: 0 0 $borderRadius $borderRadius;
+
+    @media screen and (min-width: $tablet) {
+      top: rem(90);
+      width: 100%;
+      max-height: calc(100vh - #{rem(90)});
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;//@todo maybe refactor
+    }
+  }
+}

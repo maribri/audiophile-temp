@@ -1,0 +1,52 @@
+.radiogroup {
+  &__option {
+    @extend .text-field;
+    padding: 0 vw($mobile, 20px);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 rem(20);
+    }
+
+    & + & {
+      margin-top: vw($mobile, 16px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(16);
+      }
+    }
+
+    &:hover, &:focus-within {
+      border-color: $accentColor;
+    }
+  }
+
+  &__radio {
+    appearance: none;
+    margin: 0 vw($mobile, 21px) 0 0;
+    width: vw($mobile, 10px);
+    height: vw($mobile, 10px);
+    background: $white;
+    box-shadow: 0 0 0 vw($mobile, 4px) white,  0 0 0 vw($mobile, 5px) $borderColor;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 rem(21) 0 0;
+      width: rem(10);
+      height: rem(10);
+      box-shadow: 0 0 0 rem(4) white,  0 0 0 rem(5) $borderColor;
+    }
+
+    &:checked, &:focus {
+      background: $accentColor;
+    }
+  }
+
+  &__caption {
+    color: $black;
+  }
+}

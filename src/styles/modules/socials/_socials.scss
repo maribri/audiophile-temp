@@ -1,0 +1,34 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $tablet - 1) {
+    justify-content: center;
+  }
+
+  &__link {
+    margin: 0 vw($mobile, 8px);
+    font-size: vw($mobile, 24);
+    color: white;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 0 0 rem(16);
+      font-size: rem(24);
+    }
+
+    &:nth-child(2) > .icon {
+      height: vw($mobile, 20);//@todo refactor
+
+      @media screen and (min-width: $tablet) {
+        height: rem(20);
+      }
+    }
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+  &__icon {
+    display: block;
+  }
+}

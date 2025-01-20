@@ -1,0 +1,43 @@
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: vw($mobile, 32px) vw($mobile, 28px) vw($mobile, 31px);
+
+  @media screen and (min-width: $tablet) {
+    padding: rem(32) rem(32) rem(31);
+  }
+
+  &__heading {
+    font-size: vw($mobile, 18px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      font-size: rem(18);
+    }
+  }
+  &__remove-btn {
+    margin-top: vw($mobile, -2px);
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(-2);
+    }
+  }
+  &__list {
+    margin: vw($mobile, 32px) 0 vw($mobile, 26px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin: rem(31) 0 rem(26);
+    }
+  }
+  &__checkout-btn {
+    margin-top: vw($mobile, 22px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(22);
+    }
+  }
+}

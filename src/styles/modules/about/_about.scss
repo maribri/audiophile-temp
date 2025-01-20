@@ -1,0 +1,59 @@
+.about {
+  margin-top: vw($mobile, 120px);
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: rem(120);
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    margin-top: rem(160);
+    text-align: left;
+  }
+
+  .bestsellers + & {
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(96);
+      margin-bottom: rem(-25);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: rem(200);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__pic {
+    margin-bottom: vw($mobile, 40px);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(63);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      margin-left: rem(120);
+      width: 48.65%;
+      flex-shrink: 0;
+      order: 1;
+    }
+
+    img { // @todo refactor with class
+      display: block;
+      width: 100%;
+      border-radius: $borderRadius;
+    }
+  }
+  &__text {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      margin: 0 7.24%;
+    }
+  }
+  &__heading {
+    margin-bottom: vw($mobile, 32px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(32);
+    }
+  }
+}

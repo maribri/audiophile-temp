@@ -1,0 +1,71 @@
+.featured {
+  margin-top: vw($mobile, 120px);
+
+  @media screen and (min-width: $tablet) {
+    margin-top: rem(119);
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: rem(160);
+  }
+
+  &__heading {
+    margin-bottom: vw($mobile, 40px);
+    text-align: center;
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(56);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(64);
+    }
+  }
+  &__list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+  &__item {
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      flex: 1 1 100%;
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: $tablet - 1) {
+        margin-bottom: vw($mobile, 56px);
+      }
+      @media screen and (min-width: $tablet) {
+        margin-right: rem(11);
+      }
+      @media screen and (min-width: $desktop) {
+        margin-right: rem(30);
+      }
+    }
+  }
+  &__pic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: $borderRadius;
+  }
+  &__title {
+    margin: vw($mobile, 32px) 0 vw($mobile, 32px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin: rem(40) 0 rem(32);
+    }
+    @media screen and (min-width: $desktop) {
+      margin: rem(40) 0 rem(32);
+    }
+  }
+  &__btn {
+    min-width: vw($mobile, 160px);
+
+    @media screen and (min-width: $tablet) {
+      min-width: rem(160);
+    }
+  }
+}

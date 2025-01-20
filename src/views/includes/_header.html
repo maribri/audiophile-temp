@@ -1,0 +1,90 @@
+<header class="header">
+  <div class="content-wrapper header__wrapper">
+    <a href="/" class="header__home-link"><img class="header__logo" src="assets/shared/desktop/logo.svg" alt="Audiophile"></a>
+    <nav class="header-nav header__nav">
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="/">Home</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="headphones.html">Headphones</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="speakers.html">Speakers</a>
+        </li>
+        <li class="header-nav__item">
+          <a class="header-nav__link" href="earphones.html">Earphones</a>
+        </li>
+      </ul>
+      <button class="header__burger" id="header-burger" type="button" aria-label="Navigation menu" aria-controls="navigation" aria-expanded="false">
+        <span></span>
+      </button>
+      <!-- Menu Panel -->
+      <div class="modal modal--full js-modal" id="mobile-menu">
+        <div class="header__menu-panel">
+          @@include('./_categories.html')
+        </div>
+      </div>
+      <!-- Menu Panel end -->
+    </nav>
+    <div class="header__cart">
+      <button type="button" class="header__cart-btn" id="cart-btn" aria-label="Toggle cart menu" aria-controls="js-cart-modal" aria-expanded="false">
+        <svg class="icon" role="img">
+          <use xlink:href="assets/sprite.svg#icon-cart"></use>
+        </svg>
+      </button>
+      <!-- Cart Modal -->
+      <div class="modal modal--compact modal--right js-modal" id="cart-modal">
+        <div class="cart">
+          <h6 class="heading heading--h6 cart__heading">Cart (3)</h6>
+          <button class="button-link cart__remove-btn js-remove-btn" type="button">Remove all</button>
+          <ul class="cart__list cart-list">
+            <!-- Cart items will be dynamically added here -->
+            <li class="cart-list__item">
+              <img class="cart-list__pic" src="assets/cart/image-xx99-mark-two-headphones.jpg" alt="XX99 MK II" loading="lazy"/>
+              <div class="cart-list__details">
+                <div class="cart-list__title">XX99 MK II</div>
+                <div class="cart-list__price">$ 2,999</div>
+              </div>
+              <div class="qty qty--small cart-list__qty">
+                <input class="qty__field qty__field--small" name="qty" type="number" value="1" min="1" aria-label="Quantity" />
+                <button class="qty__btn qty__btn--decrease" type="button" aria-label="Decrease quantity">-</button>
+                <button class="qty__btn qty__btn--increase" type="button" aria-label="Increase quantity">+</button>
+              </div>
+            </li>
+            <li class="cart-list__item">
+              <img class="cart-list__pic" src="assets/cart/image-xx59-headphones.jpg" alt="XX59" loading="lazy"/>
+              <div class="cart-list__details">
+                <div class="cart-list__title">XX59</div>
+                <div class="cart-list__price">$ 899</div>
+              </div>
+              <div class="qty qty--small cart-list__qty">
+                <input class="qty__field qty__field--small" name="qty" type="number" value="2" min="1" aria-label="Quantity" />
+                <button class="qty__btn qty__btn--decrease" type="button" aria-label="Decrease quantity">-</button>
+                <button class="qty__btn qty__btn--increase" type="button" aria-label="Increase quantity">+</button>
+              </div>
+            </li>
+            <li class="cart-list__item">
+              <img class="cart-list__pic" src="assets/cart/image-yx1-earphones.jpg" alt="YX1" loading="lazy"/>
+              <div class="cart-list__details">
+                <div class="cart-list__title">YX1</div>
+                <div class="cart-list__price">$ 599</div>
+              </div>
+              <div class="qty qty--small cart-list__qty">
+                <input class="qty__field qty__field--small" name="qty" type="number" value="1" min="1" aria-label="Quantity" />
+                <button class="qty__btn qty__btn--decrease" type="button" aria-label="Decrease quantity">-</button>
+                <button class="qty__btn qty__btn--increase" type="button" aria-label="Increase quantity">+</button>
+              </div>
+            </li>
+          </ul>
+          <dl class="cart__subtotal subtotal">
+            <dt class="subtotal__caption cart__total-title">Total</dt>
+            <dd class="subtotal__value cart__total-price">$ 5,396</dd><!-- @todo for what the class cart__total-price exists? -->
+          </dl>
+          <a class="button button--primary cart__checkout-btn" href="checkout.html">Checkout</a>
+        </div>
+      </div>
+      <!-- Cart Modal end -->
+    </div>
+  </div>
+</header>

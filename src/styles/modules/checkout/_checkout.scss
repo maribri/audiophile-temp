@@ -1,0 +1,143 @@
+.checkout {
+  margin-bottom: vw($mobile, -23px);
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: rem(-3);
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  &__panel {
+    margin-top: vw($mobile, 24px);
+    padding: vw($mobile, 24px) vw($mobile, 24px) vw($mobile, 32px);
+    background-color: $white;
+    border-radius: $borderRadius;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(24);
+      padding: rem(27) rem(28) rem(30);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: rem(37);
+      padding: rem(52) rem(48) rem(48);
+    }
+
+    &--summary {
+      margin-top: vw($mobile, 32px);
+      padding-top: vw($mobile, 25px);
+      padding-bottom: vw($mobile, 32px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(32);
+        padding: rem(26) rem(33) rem(32);
+      }
+      @media screen and (min-width: $desktop) {
+        flex-shrink: 0;
+        margin-top: rem(37);
+        margin-left: rem(30);
+        padding: rem(27) rem(33) rem(32);
+        width: rem(350);
+      }
+    }
+  }
+
+  &__group {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    & + &:not(&--payment) {
+      margin-top: vw($mobile, 32px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(53);
+      }
+    }
+
+    &--payment {
+      margin-top: vw($mobile, 32px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(61);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: vw($mobile, 32px);
+    letter-spacing: 0.036em;
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(18);
+      font-size: rem(32);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(36);
+    }
+  }
+
+  &__subtitle {
+    padding-top: vw($mobile, 4px);
+    text-transform: uppercase;
+    font-size: vw($mobile, 18px);
+    font-weight: bold;
+    letter-spacing: 0.071em;
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: rem(4);
+      font-size: rem(18);
+    }
+  }
+  &__caption {
+    margin-bottom: vw($mobile, -8px);
+    line-height: 1.925;
+    text-transform: uppercase;
+    font-size: vw($mobile, 13px);
+    font-weight: bold;
+    letter-spacing: 0.071em;
+    color: $accentColor;
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+      margin-bottom: rem(-8);
+      font-size: rem(13);
+    }
+  }
+
+  &__cart-list {
+    margin: vw($mobile, 29px) 0 vw($mobile, 26px);
+
+    @media screen and (min-width: $tablet) {
+      margin: rem(28) 0 rem(25);
+    }
+  }
+
+  &__notice-cash {
+    margin: vw($mobile, 30px) 0 0;
+    padding-left: vw($mobile, 80px);
+    background: url('../assets/cart/cash.svg') no-repeat left center;
+    background-size: vw($mobile, 48px) auto;
+
+    @media screen and (min-width: $tablet) {
+      margin: rem(30) 0 0;
+      padding-left: rem(80);
+      background-size: rem(48) auto;
+    }
+  }
+
+  &__btn-pay {
+    margin-top: vw($mobile, 30px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(30);
+    }
+  }
+}

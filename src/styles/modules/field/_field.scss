@@ -1,0 +1,73 @@
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: vw($mobile, 23px);
+
+  @media screen and (min-width: $tablet) {
+    width: calc(50% - #{rem(8)});
+    margin-top: rem(23);
+  }
+
+  &--full-width {
+    width: 100% !important;
+  }
+
+  &--radiogroup {
+    @media screen and (max-width: $tablet - 1) {
+      margin-bottom: vw($mobile, 31px);
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      //margin-bottom: rem(0);
+      width: 100% !important;
+    }
+  }
+
+  &__label {
+    font-size: vw($mobile, 12px);
+    font-weight: bold;
+    color: $black;
+    letter-spacing: -0.018em;
+
+    &--error {
+      color: $red;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: rem(12);
+    }
+  }
+  &__error {
+    font-size: vw($mobile, 12px);
+    color: $red;
+    letter-spacing: -0.018em;
+
+    @media screen and (min-width: $tablet) {
+      font-size: rem(12);
+    }
+  }
+  &__input {
+    margin-top: vw($mobile, 6px);
+    width: 100%;
+
+    &--error {
+      border-width: 2px !important;
+      border-color: $red !important; // @todo refactor
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(6);
+    }
+  }
+  &__group {
+    margin-top: vw($mobile, 14px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(1);
+      width: calc(50% - #{rem(8)});
+    }
+  }
+}

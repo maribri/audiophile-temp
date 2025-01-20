@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./includes/_head.html')
+</head>
+
+<body>
+  <div class="page-layout">
+    @@include('./includes/_header.html')
+    <div class="category">
+      <h2 class="heading heading--h2">Speakers</h2>
+    </div>
+    <main class="main content-wrapper">
+      <ul class="products">
+        <li class="products__item">
+          <div class="products__picture">
+            <picture>
+              <source srcset="assets/product-zx9-speaker/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
+              <source srcset="assets/product-zx9-speaker/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
+              <img src="assets/product-zx9-speaker/mobile/image-category-page-preview.jpg" alt="ZX9 speaker" loading="lazy"/>
+            </picture>
+          </div>
+          <div class="products__details">
+            <div class="products__label">New product</div>
+
+            <h2 class="heading heading--h2 products__title">ZX9 speaker</h2>
+            <div class="products__text">Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</div>
+
+            <a class="button button--primary products__link" href="product-zx9-speaker.html">See product</a>
+          </div>
+        </li>
+
+        <li class="products__item">
+          <div class="products__picture">
+            <picture>
+              <source srcset="assets/product-zx7-speaker/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
+              <source srcset="assets/product-zx7-speaker/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
+              <img src="assets/product-zx7-speaker/mobile/image-category-page-preview.jpg" alt="ZX7 speaker" loading="lazy"/>
+            </picture>
+          </div>
+          <div class="products__details">
+            <h2 class="heading heading--h2 products__title">ZX7 speaker</h2>
+            <div class="products__text">Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</div>
+
+            <a class="button button--primary products__link" href="product-zx7-speaker.html">See product</a>
+          </div>
+        </li>
+      </ul>
+
+      @@include('./includes/_categories.html')
+
+      @@include('./includes/_about.html')
+    </main>
+    @@include('./includes/_footer.html')
+  </div>
+</body>
+
+</html>

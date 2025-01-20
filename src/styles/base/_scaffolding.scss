@@ -1,0 +1,237 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $offWhite;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+button,
+.button,
+textarea,
+select,
+a {
+  &:focus {
+    outline-color: $orangeHover; //@todo focus outline
+  }
+}
+
+.button:focus { //@todo rewrite scss
+  outline-offset: 3px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: $fontBase;
+  font-size: vw($mobile, 15px);
+  font-weight: 500;
+  line-height: 1.667;
+  color: $defaultText;//@todo check all sizes again
+
+  @media screen and (min-width: $tablet) {
+    font-size: rem(15);
+  }
+
+  /* stylelint-disable-next-line */
+  &.body--fixed {
+    overflow-y: hidden;
+  }
+  &.body--inactive {
+    //overflow-y: hidden;
+    //pointer-events: none;
+    //position: fixed;
+    overflow: hidden;
+  }
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: $tabletWrapper;
+  margin: 0 auto;
+  padding-right: vw($mobile, $mobilePadding);
+  padding-left: vw($mobile, $mobilePadding);
+
+  @media screen and (min-width: $tablet) {
+    max-width: $desktopWrapper;
+    padding-right: rem($tabletPadding);
+    padding-left: rem($tabletPadding);
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: $desktopWrapper;
+    padding-right: rem($desktopPadding);
+    padding-left: rem($desktopPadding);
+  }
+  @media screen and (min-width: $desktopMax) {
+    max-width: $desktopMaxWrapper;
+  }
+}
+
+.icon {
+  outline: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.main {
+  padding-top: vw($mobile, 16px);
+
+  @media screen and (min-width: $desktop) {
+    padding-top: rem(79);
+    overflow-x: hidden;
+  }
+}
+
+.area-clickable {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.overlay {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(25, 25, 25, 0.5);
+  z-index: 4;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.page-layout {
+  position: relative;
+
+  &--offwhite {
+    background-color: $lightGray;
+  }
+}
+
+.color-primary {
+  color: $accentColor;
+}
+
+.back-link {
+  text-transform: capitalize;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button-link {
+  @extend %button-unstyled;
+  color: $defaultText;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+//filter: drop-shadow(0 3px 20px rgba(23, 11, 69, 0.12));
+
+.locales {
+  &__item {
+    $arrowIconSize: 3px;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      margin-left: vw($mobile, 8px);
+      border-left: vw($mobile, $arrowIconSize) solid transparent;
+      border-right: vw($mobile, $arrowIconSize) solid transparent;
+      border-top: vw($mobile, $arrowIconSize) solid currentColor;
+      transform: translateY(vw($mobile, 3px));
+    }
+
+    &--active {
+      &::after {
+        transform: rotate(180deg) translateY(vw($mobile, -3px));
+
+        @media screen and (min-width: $desktop) {
+          transform: rotate(180deg) translateY(rem(-6px));
+        }
+      }
+    }
+  }
+}
+
+.couriers {
+  @media screen and (min-width: $desktop) {
+    background: url('../media/images/map@1x.jpg') no-repeat 50% top;
+
+    @supports (background-image: image-set(url('../media/images/map@1x.webp') 1x)) {
+      background-image: url('../media/images/map@1x.webp');
+    }
+  }
+}
+
+.mobile-contacts {
+  $this: &;
+  background-color: $white;
+
+  &:not(.mobile-contacts--open) {
+    > #{$this}__wrap {
+      display: none;
+    }
+  }
+}

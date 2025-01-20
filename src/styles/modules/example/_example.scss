@@ -1,0 +1,19 @@
+.example {
+  padding-top: vw($mobile, 10px);
+
+  @media screen and (min-width: $tablet) {
+    padding-top: rem(10);
+  }
+
+  @media screen and (min-width: $desktop) {
+    //padding-top: rem(10);
+  }
+
+  &__title {
+    margin-bottom: vw($mobile, 10px);
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(10);
+    }
+  }
+}

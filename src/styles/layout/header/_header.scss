@@ -1,0 +1,261 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 0 0 vw($mobile, 2);
+  height: vw($mobile, 90);
+  color: $white;
+  background-color: $offBlack;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 0 rem(2);
+    height: rem(90);
+  }
+  @media screen and (min-width: $desktop) {
+    height: rem(97);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @media screen and (min-width: $tablet) {
+      justify-content: flex-start;
+    }
+
+    body:has(.intro, .category) & {
+      position: relative;
+    }
+
+    body:has(.intro, .category) &:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: vw($mobile, $mobilePadding);
+      right: vw($mobile, $mobilePadding);
+      height: 1px;
+      background-color: rgba($white, 0.2);
+
+      @media screen and (min-width: $tablet) {
+        left: rem($tabletPadding);
+        right: rem($tabletPadding);
+      }
+      @media screen and (min-width: $desktop) {
+        left: rem($desktopPadding);
+        right: rem($desktopPadding);
+      }
+    }
+  }
+
+  &__home-link {
+    margin-left: vw($mobile, 14);
+
+    @media screen and (min-width: $tablet) {
+      margin-left: rem(42);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: vw($mobile, 143px);
+
+    @media screen and (min-width: $tablet) {
+      width: rem(143);
+    }
+  }
+
+  &__burger {
+    @extend %button-unstyled;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: vw($mobile, 16px);
+    height: vw($mobile, 15px);
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+      width: rem(16);
+      height: rem(15);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% + vw($mobile, 26px));
+      height: calc(100% + vw($mobile, 26px));
+
+      @media screen and (min-width: $tablet) {
+        width: calc(100% + #{rem(26)});
+        height: calc(100% + #{rem(26)});
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    & > span {
+      &,
+      &:before,
+      &:after {
+        position: relative;
+        left: 0;
+        width: vw($mobile, 16px);
+        height: 3px;
+        background-color: $white;
+        transition: top 0.25s ease-out, transform 0.25s ease-out;
+
+        @media screen and (min-width: $tablet) {
+          width: rem(16);
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: vw($mobile, -6px);
+
+        @media screen and (min-width: $tablet) {
+          top: rem(-6);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: vw($mobile, 6px);
+
+        @media screen and (min-width: $tablet) {
+          top: rem(6);
+        }
+      }
+    }
+
+    &--open {
+      & > span {
+        & {
+          background-color: transparent;
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate(-45deg);
+
+          @media screen and (min-width: $tablet) {
+            top: 0;
+          }
+        }
+
+        &:after {
+          top: 0;
+          transform: rotate(45deg);
+
+          @media screen and (min-width: $tablet) {
+            top: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__menu-panel {
+    padding: vw($mobile, 84px) vw($mobile, 24px) vw($mobile, 35px);
+
+    @media screen and (min-width: $tablet) {
+      padding: rem(108) rem(40) rem(67);
+    }
+  }
+
+  &__cart {
+    position: relative;
+    margin-right: vw($mobile, -9);
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 rem(-9) 0 auto;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: rem(-12) rem(-9) 0 auto;
+    }
+  }
+
+  &__cart-btn {
+    @extend %button-unstyled;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: vw($mobile, 42);
+    height: vw($mobile, 42);
+    font-size: vw($mobile, 23);
+    color: white;
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+      width: rem(42);
+      height: rem(42);
+      font-size: rem(23);
+    }
+
+    & > .icon {
+      height: vw($mobile, 20);//@todo refactor
+
+      @media screen and (min-width: $tablet) {
+        height: rem(20);
+      }
+    }
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
+
+.header-nav {
+  @media screen and (max-width: $desktop - 1) {
+    order: -1;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: rem(180);
+  }
+
+  &__list {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0 rem(17);
+  }
+
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    font-size: rem(13);
+    font-weight: 700;
+    color: $white;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+
+    &:hover {
+      color: $accentColor;
+      text-decoration: none;
+    }
+  }
+}

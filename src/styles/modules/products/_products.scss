@@ -1,0 +1,108 @@
+.products {
+  margin-top: vw($mobile, 48px);
+
+  @media screen and (min-width: $tablet) {
+    margin-top: rem(87);
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: rem(80);
+  }
+
+  &__item {
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    & + & {
+      margin-top: vw($mobile, 120px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(120);
+      }
+      @media screen and (min-width: $desktop) {
+        margin-top: rem(160);
+      }
+    }
+  }
+  &__picture {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      width: 48.65%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: $borderRadius;
+    }
+  }
+  &__details {
+    margin-top: vw($mobile, 32px);
+
+    @media screen and (min-width: $tablet) {
+      margin: rem(52) rem(52) 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 0;
+      width: 40.181%;
+      min-width: rem(296);
+    }
+
+    .products__item:nth-child(even) & {
+      @media screen and (min-width: $desktop) {
+        order: -1;
+      }
+    }
+  }
+  &__label {
+    @extend %overline;
+    margin-bottom: vw($mobile, 24px);
+    color: $accentColor;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(16);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(17);
+    }
+  }
+  &__title {
+    margin: 0 vw($mobile, 68px) vw($mobile, 24px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin: 0 rem(156) rem(32);
+    }
+    @media screen and (min-width: $desktop) {
+      margin: 0 0 rem(32);
+      padding-top: rem(38);
+      max-width: rem(274);
+    }
+
+    .products__label + & {
+      @media screen and (min-width: $desktop) {
+        padding-top: 0;
+      }
+    }
+  }
+  &__text {
+    margin-bottom: vw($mobile, 24px);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(24);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(40);
+    }
+  }
+  &__link {
+    @extend %button-width;
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "Markup",
+  "main": "index.html",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "gulp build": "gulp build",
+    "styles:fix": "stylelint --ignore-path .gitignore **/styles/**/*.scss --syntax scss --fix",
+    "styles:lint": "stylelint --ignore-path .gitignore **/styles/**/*.scss --syntax scss"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.1",
+    "gulp-svgo": "^2.2.1",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.4.20",
+    "postcss-csso": "^6.0.1",
+    "postcss-discard-comments": "^5.1.2",
+    "postcss-sorting": "^7.0.1",
+    "sass": "^1.56.2",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0"
+  },
+  "browserslist": [
+    "last 7 versions",
+    "not ie <= 11"
+  ],
+  "dependencies": {
+    "@splidejs/splide": "^3.6.9"
+  }
+}

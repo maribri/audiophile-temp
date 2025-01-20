@@ -1,0 +1,24 @@
+.kit-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__qty {
+    width: vw($mobile, 40px);
+    font-weight: bold;
+    color: $accentColor;
+
+    @media screen and (min-width: $tablet) {
+      width: rem(40);
+    }
+  }
+  &__caption {
+    margin-bottom: vw($mobile, 8px);
+    width: calc(100% - vw($mobile, 40px));
+    text-transform: capitalize;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(8);
+      width: calc(100% - #{rem(40)});//@todo
+    }
+  }
+}

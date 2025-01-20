@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include('./includes/_head.html')
+</head>
+
+<body>
+<div class="page-layout">
+  @@include('./includes/_header.html')
+  <div class="category">
+    <h2 class="heading heading--h2">Earphones</h2>
+  </div>
+  <main class="main content-wrapper">
+    <ul class="products">
+      <li class="products__item">
+        <div class="products__picture">
+          <picture>
+            <source srcset="assets/product-yx1-earphones/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
+            <source srcset="assets/product-yx1-earphones/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
+            <img src="assets/product-yx1-earphones/mobile/image-category-page-preview.jpg" alt="YX1 wireless earphones" loading="lazy"/>
+          </picture>
+        </div>
+        <div class="products__details">
+          <div class="products__label">New product</div>
+
+          <h2 class="heading heading--h2 products__title">YX1 wireless earphones</h2>
+          <div class="products__text">Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</div>
+
+          <a class="button button--primary products__link" href="product-earphones.html">See product</a>
+        </div>
+      </li>
+    </ul>
+
+    @@include('./includes/_categories.html')
+
+    @@include('./includes/_about.html')
+  </main>
+  @@include('./includes/_footer.html')
+</div>
+</body>
+
+</html>

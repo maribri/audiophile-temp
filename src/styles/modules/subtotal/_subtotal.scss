@@ -1,0 +1,67 @@
+.subtotal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &--order {
+    display: block;
+  }
+
+  &__caption {
+    margin-top: vw($mobile, 3px);
+    text-transform: uppercase;
+    width: 50%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(3);
+    }
+
+    &--grand {
+      margin-top: vw($mobile, 19px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(20);
+      }
+    }
+
+    &--order {
+      margin: 0 0 vw($mobile, 6px);
+      width: auto;
+
+      @media screen and (min-width: $tablet) {
+        margin: 0 0 rem(6);
+      }
+    }
+  }
+  &__value {
+    margin-top: vw($mobile, 3px);
+    width: 50%;
+    text-align: right;
+    font-size: vw($mobile, 18px);
+    font-weight: bold;
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(3);
+      font-size: rem(18);
+    }
+
+    &--grand {
+      margin-top: vw($mobile, 19px);
+      color: $accentColor;
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(20);
+      }
+    }
+
+    &--order {
+      margin: 0;
+      width: auto;
+      text-align: left;
+      color: $white;
+    }
+  }
+}

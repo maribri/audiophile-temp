@@ -1,0 +1,68 @@
+.qty {
+  position: relative;
+
+  &__field {
+    width: vw($mobile, 120px);
+    height: vw($mobile, 48px);
+    text-align: center;
+    border: 0;
+    background-color: $lightGray;
+    -moz-appearance: textfield;
+
+    @media screen and (min-width: $tablet) {
+      width: rem(120);
+      height: rem(48);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &--small {
+      width: vw($mobile, 96px);
+      height: vw($mobile, 32px);
+
+      @media screen and (min-width: $tablet) {
+        width: rem(96);
+        height: rem(32);
+      }
+    }
+  }
+
+  &__btn {
+    @extend %button-unstyled;
+    position: absolute;
+    top: 0;
+    width: vw($mobile, 44px);
+    height: 100%;
+    color: $defaultText;
+
+    @media screen and (min-width: $tablet) {
+      width: rem(44);
+    }
+
+    &--decrease {
+      left: 0;
+    }
+    &--increase {
+      right: 0;
+    }
+
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+    &:hover {
+      color: $accentColor;
+    }
+
+    .qty__field--small ~ & {
+      width: vw($mobile, 36px);
+
+      @media screen and (min-width: $tablet) {
+        width: rem(36);
+      }
+    }
+  }
+}

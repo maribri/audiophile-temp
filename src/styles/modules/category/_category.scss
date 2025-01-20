@@ -1,0 +1,15 @@
+.category {
+  position: relative;
+  padding: vw($mobile, 32px) 0;
+  text-align: center;
+  letter-spacing: 0.071em;// @todo
+  color: $white;
+  background-color: $offBlack;
+
+  @media screen and (min-width: $tablet) {
+    padding: rem(105) 0 rem(97);
+  }
+  @media screen and (min-width: $desktop) {
+    padding: rem(98) 0 rem(97);
+  }
+}

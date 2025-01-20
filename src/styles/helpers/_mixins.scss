@@ -1,0 +1,168 @@
+/************** Default mixins *************/
+@use 'sass:math';
+// px to rem
+@function strip-units($pxval) {
+  @return math.div($pxval, ($pxval * 0 + 1));
+}
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $baseFontSize;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return (math.div($pxval, $base)) * 1rem;
+}
+
+// px to vw
+@function strip-units($pxval) {
+  @return math.div($pxval, ($pxval * 0 + 1));
+}
+
+@function vw($base, $pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return (math.div($pxval, $base)) * 100vw;
+}
+
+@mixin img-container() {
+  position: relative;
+
+  & img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+%button-unstyled {
+  padding: 0;
+  background: none no-repeat;
+  appearance: none;
+  border: 0;
+}
+
+%input-unstyled {
+  padding: 0;
+  background: none no-repeat;
+  appearance: none;
+  border: 0;
+}
+
+%overline {
+  text-transform: uppercase;
+  line-height: 1.357;
+  font-size: vw($mobile, 14px);
+  font-weight: 400;
+  letter-spacing: 0.714em;
+
+  @media screen and (min-width: $tablet) {
+    font-size: rem(14);
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: rem(14);
+  }
+}
+
+%img-contained {
+  display: block;
+  max-width: 100%;
+  border-radius: $borderRadius;
+}
+
+%button-width {
+  min-width: vw($mobile, 160px);
+
+  @media screen and (min-width: $tablet) {
+    min-width: rem(160);
+  }
+}
+
+%button-link {
+  @extend %button-unstyled;
+  display: inline;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%list-styled {
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: vw($mobile, 2px) 0 vw($mobile, 2px) vw($mobile, 17px);
+
+    @media screen and (min-width: $desktop) {
+      padding: rem(4) 0 rem(4) rem(17);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: vw($mobile, 13px);
+      left: 0;
+      width: vw($mobile, 6px);
+      height: vw($mobile, 6px);
+      background-color: $black;
+      border-radius: 50%;
+
+      @media screen and (min-width: $desktop) {
+        top: rem(13);
+        width: rem(6);
+        height: rem(6);
+      }
+    }
+  }
+}
+
+%list-iconed {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  line-height: 1.15;
+  font-weight: 300;
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    line-height: 1;
+  }
+}
+
+%list-iconed__item {
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  min-height: vw($mobile, 48px);
+  margin-bottom: vw($mobile, 10px);
+
+  @media screen and (min-width: $desktop) {
+    align-items: center;
+    width: 44.5%;
+    min-height: rem(39);
+    margin-bottom: rem(49);
+    padding-right: 3%;
+  }
+}

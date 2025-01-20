@@ -1,0 +1,167 @@
+.bestsellers {
+  margin-top: vw($mobile, 120px);
+
+  @media screen and (min-width: $tablet) {
+    margin-top: rem(97);
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: rem(169);
+  }
+
+  &__item {
+    color: $black;
+
+    &--primary {
+      padding: vw($mobile, 62px) vw($mobile, 10px) vw($mobile, 55px);
+      text-align: center;
+      color: $white;
+      background: $accentColor url('../assets/home/desktop/pattern-circles.svg') no-repeat top vw($mobile, -120px) center;
+      background-size: vw($mobile, 556px) auto;
+      border-radius: $borderRadius;
+
+      @media screen and (min-width: $tablet) {
+        padding: rem(59) rem(160) rem(64);
+        background-position: top rem(288) center;
+        background-size: rem(944) auto;
+      }
+      @media screen and (min-width: $desktop) {
+        overflow: hidden;
+        padding: rem(50) 8.5% rem(51) rem(139);
+        background-position: bottom rem(-348) left rem(-149);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+
+        & picture {
+          flex-shrink: 0;
+          width: rem(378);
+        }
+      }
+    }
+    &--secondary {
+      position: relative;
+      background-color: $lightGray;
+      border-radius: $borderRadius;
+    }
+    &--tertiary {
+      @media screen and (min-width: $tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(11);
+      }
+      @media screen and (min-width: $desktop) {
+        column-gap: rem(30);
+      }
+    }
+    &--secondary, &--tertiary {
+      margin-top: vw($mobile, 24px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(32);
+      }
+      @media screen and (min-width: $desktop) {
+        margin-top: rem(48);
+      }
+    }
+  }
+  &__pic {
+    display: block;
+    max-width: 100%;
+
+    .bestsellers__item--primary & {// @todo refactor bem classnames
+      margin: 0 auto vw($mobile, 39px);
+      width: vw($mobile, 160px);
+
+      @media screen and (min-width: $tablet) {
+        margin-bottom: rem(72);
+        width: rem(183);
+      }
+      @media screen and (min-width: $desktop) {
+        margin: 0;
+        width: /*378px*/100%;
+        flex-shrink: 0;
+        transform: translateY(rem(64));
+      }
+    }
+    .bestsellers__item--secondary &, .bestsellers__item--tertiary & {
+      width: 100%;
+      border-radius: $borderRadius;
+    }
+  }
+  &__details {
+    .bestsellers__item--primary & {
+      @media screen and (min-width: $desktop) {
+        padding-top: rem(10);
+        width: /*350px*/40%;
+      }
+    }
+    .bestsellers__item--secondary & {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 vw($mobile, 25px);
+
+      @media screen and (min-width: $tablet) {
+        padding: 0 rem(63);
+      }
+      @media screen and (min-width: $desktop) {
+        padding-left: rem(96);
+      }
+    }
+    .bestsellers__item--tertiary & {
+      margin-top: vw($mobile, 24px);
+      padding: vw($mobile, 41px) vw($mobile, 25px);
+      background-color: $lightGray;
+      border-radius: $borderRadius;
+
+      @media screen and (min-width: $tablet) {
+        margin-top: 0;
+        padding: 0 rem(42);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      @media screen and (min-width: $desktop) {
+        padding-left: rem(96);
+      }
+    }
+  }
+  &__title {
+    .bestsellers__item--primary & {
+      @media screen and (max-width: $tablet - 1) {
+        margin: 0 vw($mobile, 32px);
+      }
+    }
+  }
+  &__text {
+    margin-top: vw($mobile, 22px);
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(22);
+    }
+  }
+  &__link {
+    @extend %button-width;
+    margin-top: vw($mobile, 24px);
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(40);
+    }
+
+    .bestsellers__item--secondary &, .bestsellers__item--tertiary & {
+      margin-top: vw($mobile, 32px);
+
+      @media screen and (min-width: $tablet) {
+        margin-top: rem(32);
+      }
+    }
+  }
+}

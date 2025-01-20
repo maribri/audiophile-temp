@@ -1,0 +1,192 @@
+.product {
+  position: relative;
+  padding: vw($mobile, 24px) 0 0;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(24) 0 0;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: rem(56) 0 0;
+  }
+
+  &__picture {
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      width: 40.72%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 48.65%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      border-radius: $borderRadius;
+    }
+  }
+
+  &__details {
+    padding-top: vw($mobile, 32px);
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 0;
+      width: 49.13%;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 40.181%;
+      min-width: rem(296);
+    }
+  }
+
+  &__label {
+    @extend %overline;
+    margin-bottom: vw($mobile, 24px);
+    color: $accentColor;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(16);
+      font-size: rem(12);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__title {
+    padding-top: vw($mobile, 8px);
+    margin-bottom: vw($mobile, 24px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: rem(36);
+      margin-bottom: rem(32);
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      line-height: 1.145;
+      font-size: rem(28);
+      letter-spacing: 0.036em;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: rem(36);
+      margin-bottom: rem(32);
+    }
+
+    .product__label + & {
+      padding-top: 0;
+
+      @media screen and (min-width: $tablet) {
+        padding-top: rem(1);
+      }
+      @media screen and (min-width: $desktop) {
+        padding-top: rem(1);
+      }
+    }
+  }
+
+  &__price {
+    margin-top: vw($mobile, 21px);
+    margin-bottom: vw($mobile, 29px);
+    font-size: vw($mobile, 18px);
+    font-weight: bold;
+    color: $black;
+    letter-spacing: 0.07em;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(29);
+      margin-bottom: rem(29);
+      font-size: rem(18);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: rem(45);
+      font-size: rem(18);
+    }
+  }
+
+  &__buy {
+    display: flex;
+  }
+
+  &__qty {
+    margin-right: vw($mobile, 16px);
+
+    @media screen and (min-width: $tablet) {
+      margin-right: rem(16);
+    }
+  }
+
+  &__add {// @todo mixin
+    min-width: vw($mobile, 160px);
+
+    @media screen and (min-width: $tablet) {
+      min-width: rem(160);
+    }
+  }
+
+  &__heading {
+    margin-bottom: vw($mobile, 24px);
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(32);
+    }
+    @media screen and (min-width: $desktop) {}
+
+    &--row {
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+        min-width: 50.7%;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: vw($mobile, 88px);
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(120);
+      width: 100%;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+      margin-top: rem(160);
+    }
+  }
+
+  &__features {
+    @media screen and (min-width: $desktop) {
+      width: 57.2%;
+    }
+  }
+
+  &__box {
+    @media screen and (max-width: $tablet - 1) {
+      margin-top: vw($mobile, 88px);
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      margin-top: rem(120);
+    }
+    @media screen and (min-width: $desktop) {
+      display: block;
+      margin-top: 0;
+      width: 31.53%;
+    }
+  }
+
+  &__gallery {
+    margin-top: vw($mobile, 114px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(145);
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: rem(160);
+    }
+  }
+}

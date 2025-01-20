@@ -1,0 +1,69 @@
+.text-field {
+  @extend %input-unstyled;
+  height: vw($mobile, 56px);
+  line-height: vw($mobile, 56px);
+  padding: 0 vw($mobile, 22px);
+  font-size: vw($mobile, 14px);
+  font-weight: bold;
+  color: $black;
+  letter-spacing: -0.018em;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+
+  @media screen and (min-width: $tablet) {
+    height: rem(56);
+    line-height: rem(56);
+    padding: 0 rem(22);
+    font-size: rem(14);
+  }
+
+  &::placeholder {
+    color: $defaultText;
+  }
+
+  @at-root textarea#{&} {
+    min-height: vw($mobile, 21px);
+    padding-top: vw($mobile, 11px);
+    resize: vertical;
+    overflow: hidden;
+
+    @media screen and (min-width: $tablet) {
+      min-height: rem(28);
+      padding-top: rem(11);
+    }
+
+    &--expanded {
+      min-height: vw($mobile, 50px);
+      overflow: initial;
+
+      @media screen and (min-width: $tablet) {
+        min-height: rem(90);
+      }
+    }
+  }
+
+  &--error {
+    // box-shadow: 0 0 0 1px rgba(#F43319, 0.8);
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $accentColor;
+  }
+
+  &:disabled {
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}

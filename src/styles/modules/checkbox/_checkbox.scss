@@ -1,0 +1,96 @@
+.checkbox {
+  position: relative;
+  min-height: vw($mobile, 30px);
+  padding-left: vw($mobile, 36px);
+
+  @media screen and (min-width: $desktop) {
+    min-height: rem(30);
+    padding-left: rem(36);
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  &__box {
+    position: absolute;
+    margin-top: vw($mobile, 4px);
+    margin-left: vw($mobile, -36px);
+    width: vw($mobile, 24px);
+    height: vw($mobile, 24px);
+    overflow: hidden;
+    //border-radius: 0.05em;
+    line-height: 1.45;
+    font-size: vw($mobile, 14px);
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0 0 0 1px #ddd;
+
+    @media screen and (min-width: $desktop) {
+      margin-top: rem(-2);
+      margin-left: rem(-36);
+      width: rem(23);
+      height: rem(23);
+      font-size: rem(14);
+    }
+
+    .checkbox:hover > & {
+      background-color: #f9f9f9;
+    }
+
+    // &--blue {
+    //   background-color: $bluePrimary;
+    //   box-shadow: 0 0 0 1px #163E92;
+
+    //   .checkbox:hover > & {
+    //     background-color: $blueLighten;
+    //   }
+    // }
+  }
+
+  &__input:checked + &__box {
+    box-shadow: 0 0 0 1px #e4e7ec;
+    background-color: #e4e7ec;
+    //background-image: $tick-black;
+
+    @media screen and (max-width: $desktop - 1px) {
+      background-size: vw($mobile, 18px) auto;
+    }
+
+    // &--blue {
+    //   box-shadow: 0 0 0 1px $blueLighten;
+    //   background-color: $blueLighten;
+    //   //background-image: $tick;
+    // }
+  }
+
+  &__input:focus + &__box {
+  //   box-shadow:
+  //           0 0 0 1px #e4e7ec;
+  //   &--blue {
+  //     box-shadow:
+  //             0 0 0 1px $blueLighten/*,
+  //           0 0 0 0.2em #7ED321*/;
+  //   }
+  }
+
+  &__input:disabled + &__box {
+    box-shadow: 0 0 0 0.1em #9B9B9B;
+
+    &--blue {
+      box-shadow: 0 0 0 0.1em #9B9B9B;
+    }
+  }
+
+  &__input:checked:disabled + &__box {
+    background-color: #9B9B9B;
+
+    &--blue {
+      background-color: #9B9B9B;
+    }
+  }
+}

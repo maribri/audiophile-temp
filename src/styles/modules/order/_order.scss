@@ -1,0 +1,114 @@
+.order {
+  padding: vw($mobile, 32px) vw($mobile, 32px) vw($mobile, 31px);
+
+  @media screen and (min-width: $tablet) {
+    padding: rem(48) rem(48) rem(48);
+  }
+
+  &__heading {
+    margin-bottom: vw($mobile, 17px);
+    line-height: 1.15;
+    color: $black;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(24);
+      margin-right: 20%;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      margin-bottom: vw($mobile, 23px);
+      width: vw($mobile, 64px);
+      height: vw($mobile, 64px);
+      background: $accentColor url('../assets/cart/tick.svg') no-repeat center center;
+      background-size: vw($mobile, 26px) auto;
+      border-radius: 50%;
+
+      @media screen and (min-width: $tablet) {
+        margin-bottom: rem(33);
+        width: rem(64);
+        height: rem(64);
+        background-size: rem(26) auto;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: vw($mobile, 24px);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: rem(33);
+    }
+  }
+
+  &__details {
+    overflow: hidden;
+    border-radius: $borderRadius;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &__list {
+    padding: vw($mobile, 24px) vw($mobile, 24px) vw($mobile, 21px);
+    background-color: $lightGray;
+
+    @media screen and (min-width: $tablet) {
+      padding: rem(24) rem(24) rem(21);
+      flex-grow: 1;
+    }
+  }
+
+  &__cart-list {
+    .cart-list__item {
+      &:nth-child(2), &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  &__total {
+    padding: vw($mobile, 14px) vw($mobile, 24px) vw($mobile, 17px);
+    background-color: $black;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: flex-end;
+      padding: rem(14) rem(24) rem(17);
+      width: 44.7%;
+
+      @media screen and (min-width: $desktop) {
+        padding-bottom: rem(38);
+        padding-left: rem(32);
+      }
+    }
+  }
+
+  &__show-more {
+    margin-top: vw($mobile, 12px);
+    padding-top: vw($mobile, 11px);
+    width: 100%;
+    text-align: center;
+    font-size: vw($mobile, 12px);
+    font-weight: bold;
+    text-decoration: none;
+    border-top: 1px solid rgba($black, 0.07);
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(12);
+      padding-top: rem(11);
+      font-size: rem(12);
+    }
+  }
+
+  &__btn {
+    margin-top: vw($mobile, 24px);
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: rem(46);
+    }
+  }
+}
