@@ -16,9 +16,13 @@
       <li class="products__item">
         <div class="products__picture">
           <picture>
-            <source srcset="assets/product-yx1-earphones/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
-            <source srcset="assets/product-yx1-earphones/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
-            <img src="assets/product-yx1-earphones/mobile/image-category-page-preview.jpg" alt="YX1 wireless earphones" loading="lazy"/>
+            <source type="image/avif" srcset="assets/product-yx1-earphones/desktop/image-category-page-preview.avif" media="(min-width: 1025px)"/>
+            <source type="image/avif" srcset="assets/product-yx1-earphones/tablet/image-category-page-preview.avif" media="(min-width: 768px)"/>
+            <source type="image/avif" srcset="assets/product-yx1-earphones/mobile/image-category-page-preview.avif"/>
+            <source type="image/webp" srcset="assets/product-yx1-earphones/desktop/image-category-page-preview.webp" media="(min-width: 1025px)"/>
+            <source type="image/webp" srcset="assets/product-yx1-earphones/tablet/image-category-page-preview.webp" media="(min-width: 768px)"/>
+            <source type="image/webp" srcset="assets/product-yx1-earphones/mobile/image-category-page-preview.webp"/>
+            <img src="assets/product-yx1-earphones/mobile/image-category-page-preview.jpg" alt="YX1 wireless earphones" loading="lazy" decoding="async"/>
           </picture>
         </div>
         <div class="products__details">

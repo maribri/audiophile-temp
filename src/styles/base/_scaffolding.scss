@@ -53,11 +53,11 @@ textarea,
 select,
 a {
   &:focus {
-    outline-color: $orangeHover; //@todo focus outline
+    outline-color: $orangeHover;
   }
 }
 
-.button:focus { //@todo rewrite scss
+.button:focus {
   outline-offset: 3px;
 }
 
@@ -69,7 +69,7 @@ body {
   font-size: vw($mobile, 15px);
   font-weight: 500;
   line-height: 1.667;
-  color: $defaultText;//@todo check all sizes again
+  color: $defaultText;
 
   @media screen and (min-width: $tablet) {
     font-size: rem(15);
@@ -79,7 +79,7 @@ body {
   &.body--fixed {
     overflow-y: hidden;
   }
-  &.body--inactive {
+  &.body--inactive { //@todo check, fix or remove
     //overflow-y: hidden;
     //pointer-events: none;
     //position: fixed;

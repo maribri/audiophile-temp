@@ -69,7 +69,7 @@
     display: block;
     max-width: 100%;
 
-    .bestsellers__item--primary & {// @todo refactor bem classnames
+    .bestsellers__item--primary & {
       margin: 0 auto vw($mobile, 39px);
       width: vw($mobile, 160px);
 

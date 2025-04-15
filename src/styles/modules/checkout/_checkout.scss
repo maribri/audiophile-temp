@@ -141,3 +141,24 @@
     }
   }
 }
+
+.learning-flex {
+  display: flex;
+  background-color: teal;
+
+  .item {
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    border: 3px solid red;
+    //flex: 1;
+    background-color: cornflowerblue;
+  }
+
+  .subitem {
+    width: 100%;
+    background-color: lime;
+  }
+}

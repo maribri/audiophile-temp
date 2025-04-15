@@ -1,4 +1,4 @@
-.intro {// @todo top line
+.intro {
   position: relative;
   padding: vw($mobile, 108px) 0 vw($mobile, 112px);
   color: $white;
@@ -16,7 +16,7 @@
   }
   @media screen and (min-width: $desktop) {
     padding: rem(128) 0 rem(158);
-    background-image: url('../assets/home/desktop/image-hero.jpg');//@todo change for better pic
+    background-image: url('../assets/home/desktop/image-hero.jpg');
     background-position: center bottom;
     background-size: auto rem(730);
   }

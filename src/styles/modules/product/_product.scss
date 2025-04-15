@@ -119,7 +119,7 @@
     }
   }
 
-  &__add {// @todo mixin
+  &__add {
     min-width: vw($mobile, 160px);
 
     @media screen and (min-width: $tablet) {

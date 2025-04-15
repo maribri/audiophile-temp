@@ -70,7 +70,7 @@
       max-height: calc(100vh - #{rem(90)});
     }
     @media screen and (min-width: $desktop) {
-      display: none;//@todo maybe refactor
+      display: none;
     }
   }
 }

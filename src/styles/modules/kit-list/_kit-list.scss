@@ -18,7 +18,7 @@
 
     @media screen and (min-width: $tablet) {
       margin-bottom: rem(8);
-      width: calc(100% - #{rem(40)});//@todo
+      width: calc(100% - #{rem(40)});
     }
   }
 }

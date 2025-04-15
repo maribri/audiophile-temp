@@ -54,7 +54,7 @@
 
     &--error {
       border-width: 2px !important;
-      border-color: $red !important; // @todo refactor
+      border-color: $red !important;
     }
 
     @media screen and (min-width: $tablet) {

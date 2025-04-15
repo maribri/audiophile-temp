@@ -209,7 +209,7 @@
     }
 
     & > .icon {
-      height: vw($mobile, 20);//@todo refactor
+      height: vw($mobile, 20);
 
       @media screen and (min-width: $tablet) {
         height: rem(20);

@@ -4,3 +4,4 @@ package-lock.json
 yarn.lock
 /src/public/views/includes/_footer-old.html
 README*.md
+/PROJECT_STATUS.md

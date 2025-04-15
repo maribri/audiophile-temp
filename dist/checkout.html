@@ -125,9 +125,9 @@
               </div>
             </li>
           </ul>
-          <dl class="cart__subtotal subtotal">
-            <dt class="subtotal__caption cart__total-title">Total</dt>
-            <dd class="subtotal__value cart__total-price">$ 5,396</dd><!-- @todo for what the class cart__total-price exists? -->
+          <dl class="subtotal cart__subtotal">
+            <dt class="subtotal__caption">Total</dt>
+            <dd class="subtotal__value">$ 5,396</dd>
           </dl>
           <a class="button button--primary cart__checkout-btn" href="checkout.html">Checkout</a>
         </div>
@@ -139,6 +139,29 @@
 
     <main class="main content-wrapper">
       <a class="back-link" href="/">Go back</a>
+      <div class="learning-flex">
+        <div class="item" style="flex-shrink: 2;">
+          <div class="subitem"></div>
+        </div>
+        <div class="item">
+          <div class="subitem"></div>
+        </div>
+        <div class="item" style="flex-shrink: 2;">
+          <div class="subitem"></div>
+        </div>
+      </div>
+      <div class="learning-flex">
+        <div class="item">
+          <div class="subitem"></div>
+        </div>
+        <div class="item" style="flex-shrink: 2;">
+          <div class="subitem"></div>
+        </div>
+        <div class="item">
+          <div class="subitem"></div>
+        </div>
+      </div>
+
       <form class="checkout" id="checkout" novalidate>
         <section class="checkout__panel">
           <h4 class="heading heading--h4 checkout__title">Checkout</h4>
@@ -353,7 +376,7 @@
                 </div>
               </li>
             </ul>
-            <button class="button-link order__show-more" type="button" id="show-more">and 2 other item(s)</button><!-- @todo think about change id to class -->
+            <button class="button-link order__show-more" type="button" id="show-more">and 2 other item(s)</button>
           </div>
           <div class="order__total">
             <dl class="subtotal subtotal--order">

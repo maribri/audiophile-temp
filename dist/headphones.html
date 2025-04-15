@@ -125,9 +125,9 @@
               </div>
             </li>
           </ul>
-          <dl class="cart__subtotal subtotal">
-            <dt class="subtotal__caption cart__total-title">Total</dt>
-            <dd class="subtotal__value cart__total-price">$ 5,396</dd><!-- @todo for what the class cart__total-price exists? -->
+          <dl class="subtotal cart__subtotal">
+            <dt class="subtotal__caption">Total</dt>
+            <dd class="subtotal__value">$ 5,396</dd>
           </dl>
           <a class="button button--primary cart__checkout-btn" href="checkout.html">Checkout</a>
         </div>
@@ -145,9 +145,13 @@
       <li class="products__item">
         <div class="products__picture">
           <picture>
-            <source srcset="assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
-            <source srcset="assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
-            <img src="assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg" alt="XX99 Mark II Headphones" loading="lazy"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.avif" media="(min-width: 1025px)"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.avif" media="(min-width: 768px)"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.avif"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.webp" media="(min-width: 1025px)"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.webp" media="(min-width: 768px)"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.webp"/>
+            <img src="assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg" alt="XX99 Mark II Headphones" loading="lazy" decoding="async"/>
           </picture>
         </div>
         <div class="products__details">
@@ -163,9 +167,13 @@
       <li class="products__item">
         <div class="products__picture">
           <picture>
-            <source srcset="assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
-            <source srcset="assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
-            <img src="assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg" alt="XX99 Mark I Headphones" loading="lazy"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.avif" media="(min-width: 1025px)"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.avif" media="(min-width: 768px)"/>
+            <source type="image/avif" srcset="assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.avif"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.webp" media="(min-width: 1025px)"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.webp" media="(min-width: 768px)"/>
+            <source type="image/webp" srcset="assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.webp"/>
+            <img src="assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg" alt="XX99 Mark I Headphones" loading="lazy" decoding="async"/>
           </picture>
         </div>
         <div class="products__details">
@@ -179,9 +187,13 @@
       <li class="products__item">
         <div class="products__picture">
           <picture>
-            <source srcset="assets/product-xx59-headphones/desktop/image-category-page-preview.jpg" media="(min-width: 1025px)"/>
-            <source srcset="assets/product-xx59-headphones/tablet/image-category-page-preview.jpg" media="(min-width: 768px)"/>
-            <img src="assets/product-xx59-headphones/mobile/image-category-page-preview.jpg" alt="XX59 Headphones" loading="lazy"/>
+            <source type="image/avif" srcset="assets/product-xx59-headphones/desktop/image-category-page-preview.avif" media="(min-width: 1025px)"/>
+            <source type="image/avif" srcset="assets/product-xx59-headphones/tablet/image-category-page-preview.avif" media="(min-width: 768px)"/>
+            <source type="image/avif" srcset="assets/product-xx59-headphones/mobile/image-category-page-preview.avif"/>
+            <source type="image/webp" srcset="assets/product-xx59-headphones/desktop/image-category-page-preview.webp" media="(min-width: 1025px)"/>
+            <source type="image/webp" srcset="assets/product-xx59-headphones/tablet/image-category-page-preview.webp" media="(min-width: 768px)"/>
+            <source type="image/webp" srcset="assets/product-xx59-headphones/mobile/image-category-page-preview.webp"/>
+            <img src="assets/product-xx59-headphones/mobile/image-category-page-preview.jpg" alt="XX59 Headphones" loading="lazy" decoding="async"/>
           </picture>
         </div>
         <div class="products__details">
@@ -219,10 +231,13 @@
     <section class="about">
   <div class="about__pic">
     <picture>
-      <source srcset="assets/shared/desktop/image-best-gear.jpg" media="(min-width: 1025px)"/>
-      <source srcset="assets/shared/tablet/image-best-gear.jpg" media="(min-width: 768px)"/>
-      <img src="assets/shared/mobile/image-best-gear.jpg" alt="Man wearing headphones" loading="lazy"/>
-      <!-- @todo add .avif -->
+      <source type="image/avif" srcset="assets/shared/desktop/image-best-gear.avif" media="(min-width: 1025px)"/>
+      <source type="image/avif" srcset="assets/shared/tablet/image-best-gear.avif" media="(min-width: 768px)"/>
+      <source type="image/avif" srcset="assets/shared/mobile/image-best-gear.avif"/>
+      <source type="image/webp" srcset="assets/shared/desktop/image-best-gear.webp" media="(min-width: 1025px)"/>
+      <source type="image/webp" srcset="assets/shared/tablet/image-best-gear.webp" media="(min-width: 768px)"/>
+      <source type="image/webp" srcset="assets/shared/mobile/image-best-gear.webp"/>
+      <img src="assets/shared/desktop/image-best-gear.jpg" alt="Man wearing headphones" loading="lazy" decoding="async"/>
     </picture>
   </div>
   <div class="about__text">
